@@ -8,7 +8,7 @@
     {{-- <img src="img_perpustakaan.jpg" alt="perpustakaan">   --}}
   </div>
     <div class="col-mb-6">
-        <img src="{{url('images')}}/naperic.jpg" width="100%" height="400px">
+        <img src="{{url('images')}}/bengkel.jpg" width="100%" height="400px">
     </div>
 
     <div class="site-section" id="home-section">
@@ -16,13 +16,14 @@
         <div class="row">
           <div class="col-md-6 mb-5">
             <h1 class="text-black serif text-uppercase mb-4">VISI</h1>
-              <p class="text-black mb-5">Rajin membaca sumber belajar dari buku yang tersedia di perpustakaan JAYA,
-                  Menjadi perpustakaan JAYA yang berfokus pada pengembangan karakter dan moral Mahasiswa</p>
+              <p class="text-black mb-5">Visi bengkel mobil adalah pandangan jangka panjang yang diinginkan atau harapan yang ingin dicapai oleh bengkel tersebut di masa depan. Hal ini mencakup aspek-aspek penting seperti nilai inti, pencapaian, dan dampak yang diharapkan dari bengkel. Visi ini membantu tim agar fokus pada tujuan bersama untuk mencapai keberhasilan jangka panjang.</p>
             <h1 class="text-black serif text-uppercase mb-4">MISI</h1>
             <ul>
-              <li>Menyediakan sumber-sumber referensi yang lengkap dan berkualitas</li>
-              <li>Menyediakan berbagai layanan berorientasi riset dan teknologi yang tepat, akurat dan cepat</li>
-              <li>Membangun kerjasama yang efektif dengan masyarakat kampus dan institusi atau organisasi</li>
+              <li>Pemahaman identitas bisnis</li>
+              <li>Menganalisis lingkungan bisnis</li>
+              <li>Definisi misi secara nyata</li>
+              <li>Periode pembaruan berkala</li>
+              <li>Komunikasi dan dukung</li>
             </ul>
           
           <div class="col-md-4">
@@ -47,15 +48,20 @@
         </div>
       </div>
     </div>
-    <h3>PENGERTIAN PERPUSTAKAAN MENURUT PARA AHLI</h3>
+    <h3>Pengertian bengkel mobil adalah tempat yang menyediakan layanan perbaikan, perawatan, dan pemeliharaan kendaraan bermobil. Fungsi utama bengkel mobil adalah untuk memastikan kendaraan tetap dalam kondisi yang baik dan aman serta mengatasi masalah teknis yang mungkin terjadi. Pada artikel ini, kita akan membahas pengertian, fungsi, tugas, dan persyaratan yang harus dipenuhi untuk membuka bengkel mobil.</h3>
     <p>
-    <h4>PERPUSTAKAAN</h4>
-        Secara lebih konkrit perpustakaan dapat dirumuskan sebagai suatu unit kerja dari sebuah 
-        lembaga pendidikan yang berupa tempat penyimpanan koleksi buku-buku pustaka untuk menunjang 
-        proses pendidikan. Dari beberapa pengertian diatas, dapat disimpulkan bahwa perpustakaan adalah 
-        tempat untuk mengembangkan informasi dan pengetahuan yang dikelola oleh suatu lembaga pendidikan, 
-        sekaligus sebagai sarana edukatif untuk membantu memperlancar cakrawala pendidik dan peserta 
-        didik dalam kegiatan belajar mengajar.
+    <h4>Bengkel </h4>
+    Bengkel mobil adalah tempat yang menyediakan layanan perbaikan dan pemeliharaan mobil. Sebagai tempat yang sangat penting dalam dunia otomotif, bengkel mobil memiliki berbagai tugas yang perlu dilakukan untuk menjaga kinerja dan keandalan kendaraan.
+    Berikut adalah tugas umum yang dilakukan di bengkel mobil
     </p>
+    <ul>
+      <li>Mendeteksi dan mendiagnosis masalah teknis pada mobil.</li>
+      <li>Mengganti atau memperbaiki komponen yang rusak atau aus pada mobil, seperti rem, suspensi, atau sistem kelistrikan.</li>
+      <li>Mengganti oli dan filter pada mesin mobil serta melakukan servis rutin lainnya untuk menjaga performa mobil.</li>
+      <li>Mengatur dan menyelaraskan sistem kemudi dan suspensi kendaraan.</li>
+      <li>Melakukan perawatan dan perbaikan pada sistem pendingin, termasuk sistem pendingin mesin dan AC mobil.</li>
+      <li>Melaksanakan proses perawatan pada sistem transmisi dan kopling mobil untuk memastikan kinerjanya yang optimal.</li>
+      <li>Memperbaiki kerusakan pada sistem kelistrikan mobil, seperti masalah pada sistem pengisian daya atau pengapian.</li>
+    </ul>
 
 @endsection
