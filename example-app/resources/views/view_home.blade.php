@@ -8,7 +8,7 @@
     {{-- <img src="img_perpustakaan.jpg" alt="perpustakaan">   --}}
   </div>
     <div class="col-mb-6">
-        <img src="{{url('images')}}/bengkel.jpg" width="100%" height="400px">
+        <img src="{{url('images')}}/bengkel.jpg" width="100%" height="100px">
     </div>
 
     <div class="site-section" id="home-section">
@@ -50,7 +50,7 @@
     </div>
     <h3>Pengertian bengkel mobil adalah tempat yang menyediakan layanan perbaikan, perawatan, dan pemeliharaan kendaraan bermobil. Fungsi utama bengkel mobil adalah untuk memastikan kendaraan tetap dalam kondisi yang baik dan aman serta mengatasi masalah teknis yang mungkin terjadi. Pada artikel ini, kita akan membahas pengertian, fungsi, tugas, dan persyaratan yang harus dipenuhi untuk membuka bengkel mobil.</h3>
     <p>
-    <h4>Bengkel </h4>
+    <h4>Bengkel Kami menyediakan </h4>
     Bengkel mobil adalah tempat yang menyediakan layanan perbaikan dan pemeliharaan mobil. Sebagai tempat yang sangat penting dalam dunia otomotif, bengkel mobil memiliki berbagai tugas yang perlu dilakukan untuk menjaga kinerja dan keandalan kendaraan.
     Berikut adalah tugas umum yang dilakukan di bengkel mobil
     </p>

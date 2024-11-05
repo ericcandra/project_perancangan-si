@@ -68,12 +68,6 @@
                         <span class="menu-title">Home</span>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('about')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">About</span>
-                      </a>
-                    </li>
                     
                     <li class="nav-item">
                       <a class="nav-link" href="{{url('jenis')}}">
@@ -94,21 +88,22 @@
                       </a>
                     </li>
                   
-                    <form method="POST" action="{{ route('logout') }}">
+                    {{-- <form method="POST" action="{{ route('logout') }}">
                       @csrf
   
                       <x-responsive-nav-link :href="route('logout')"
                               onclick="event.preventDefault();
                                           this.closest('form').submit();">
                           {{ __('Log Out') }}
-                      </x-responsive-nav-link>
-                  </form>
-                    {{-- <li><a href="{{url ('#buku')}}" class="nav-link">buku</a></li>
-                    <li><a href="{{url ('#anggota')}}" class="nav-link">anggota</a></li>
-                    <li><a href="{{url ('#petugas')}}" class="nav-link">petugas</a></li>
-                    <li><a href="{{url ('#pinjam')}}" class="nav-link">pinjam</a></li>
-                    <li><a href="{{url ('#detailpeminjaman')}}" class="nav-link">detail peminjaman</a></li>
-                   --}}
+                      </x-responsive-nav-link> --}}
+                  {{-- </form> --}}
+                    {{-- <li><a href="{{url ('#dashboard')}}" class="nav-link">Dashboard</a></li>
+                    <li><a href="{{url ('#home')}}" class="nav-link">Home</a></li>
+                    <li><a href="{{url ('#about')}}" class="nav-link">About</a></li>
+                    <li><a href="{{url ('#jenis')}}" class="nav-link">Jenis</a></li>
+                    <li><a href="{{url ('#service')}}" class="nav-link">Service</a></li>
+                    <li><a href="{{url ('#contact')}}" class="nav-link">Contact</a></li> --}}
+                  
                   </ul>
                 </div>
               </nav>
@@ -137,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 ml-auto">
+          {{-- <div class="col-lg-3 ml-auto">
            
             <div class="row mb-5">
               <div class="col-md-12">
@@ -156,10 +151,10 @@
               
             </div>
             
-          </div>
+          </div> --}}
           
 
-          <div class="col-lg-4 mb-5 mb-lg-0" id="contact-section">
+          {{-- <div class="col-lg-4 mb-5 mb-lg-0" id="contact-section">
 
             <div class="mb-5">
               <h3 class="footer-heading mb-4">hubungi kami</h3>
@@ -201,7 +196,7 @@
         </div>
       </div>
     </footer>
-  </div>
+  </div> --}}
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
