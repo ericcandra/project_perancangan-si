@@ -73,13 +73,13 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#produk">Produk</a></li>
-          <li><a href="#stok">Stok</a></li>
-          <li><a href="#transaksi">Transaksi</a></li>
-          <li><a href="#laporan">Laporan</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href={{url ("#home")}} class="active">Home</a></li>
+          <li><a href={{url ("#about")}}>About</a></li>
+          <li><a href={{url ("#produk")}}>Produk</a></li>
+          <li><a href={{url ("#stok")}}>Stok</a></li>
+          <li><a href={{url ("#transaksi")}}>Transaksi</a></li>
+          <li><a href={{url ("#laporan")}}>Laporan</a></li>
+          <li><a href={{url ("#contact")}}>Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -99,7 +99,7 @@
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Bengkel Al auto Speed</span></h2>
             <p class="animate__animated animate__fadeInUp">Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            <a href={{url ("#about")}} class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
 
@@ -231,10 +231,10 @@
       <h3 class="sitename">Bengkel Al auto Speed</h3>
       <p>Untuk Informasi lebih lanjut bisa hubungi kami melalui media sosial media kami di bawah ini</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href={{url ("")}}><i class="bi bi-twitter-x"></i></a>
+        <a href={{url ("")}}><i class="bi bi-facebook"></i></a>
+        <a href={{url ("")}}><i class="bi bi-instagram"></i></a>
+        <a href={{url ("")}}><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
