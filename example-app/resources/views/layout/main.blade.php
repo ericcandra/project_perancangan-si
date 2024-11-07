@@ -1,8 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Booke Colorlib Template</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
@@ -22,206 +23,245 @@
     
 
     <link rel="stylesheet" href="{{url ('css/style.css')}}">
-    
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <div class="site-wrap">
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-    
-    
-    <div class="site-navbar-wrap">
-      
-      <div class="site-navbar site-navbar-target js-sticky-header">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-6 col-lg-3">
-              <h1 class="my-0 site-logo"><img src="{{url('images')}}/bn.png" width="100%" height="220px">
-                {{-- <a href="{{url ('index.html')}}"></a></h1> --}}
-            </div>
-            <div class="col-6 col-lg-9">
-              <nav class="site-navigation text-right" role="navigation">
-                <div class="container">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>@yield('title')</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-                  <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3 "><a href="{{url('#')}}" class="site-menu-toggle js-menu-toggle text-black">
-                    <span class="icon-menu h3"></span>
-                  </a></div>
-                  
-                  <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('dashboard')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">Dashboard</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('home')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">Home</span>
-                      </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('jenis')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">Jenis</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('service')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">Service</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{url('contact')}}">
-                        <i class="mdi mdi-view-quilt menu-icon"></i>
-                        <span class="menu-title">Contact</span>
-                      </a>
-                    </li>
-                  
-                    {{-- <form method="POST" action="{{ route('logout') }}">
-                      @csrf
-  
-                      <x-responsive-nav-link :href="route('logout')"
-                              onclick="event.preventDefault();
-                                          this.closest('form').submit();">
-                          {{ __('Log Out') }}
-                      </x-responsive-nav-link> --}}
-                  {{-- </form> --}}
-                    {{-- <li><a href="{{url ('#dashboard')}}" class="nav-link">Dashboard</a></li>
-                    <li><a href="{{url ('#home')}}" class="nav-link">Home</a></li>
-                    <li><a href="{{url ('#about')}}" class="nav-link">About</a></li>
-                    <li><a href="{{url ('#jenis')}}" class="nav-link">Jenis</a></li>
-                    <li><a href="{{url ('#service')}}" class="nav-link">Service</a></li>
-                    <li><a href="{{url ('#contact')}}" class="nav-link">Contact</a></li> --}}
-                  
-                  </ul>
-                </div>
-              </nav>
-            </div>
+  <!-- Favicons -->
+  <link href={{url ("assets/img/favicon.png")}} rel="icon">
+  <link href={{url ("assets/img/apple-touch-icon.png")}} rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href={{url ("https://fonts.googleapis.com")}} rel="preconnect">
+  <link href={{url ("https://fonts.gstatic.com")}} rel="preconnect" crossorigin>
+  <link href={{url ("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")}} rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href={{url ("assets/vendor/bootstrap/css/bootstrap.min.css")}} rel="stylesheet">
+  <link href={{url ("assets/vendor/bootstrap-icons/bootstrap-icons.css")}} rel="stylesheet">
+  <link href={{url ("assets/vendor/aos/aos.css")}} rel="stylesheet">
+  <link href={{url ("assets/vendor/animate.css/animate.min.css")}} rel="stylesheet">
+  <link href={{url ("assets/vendor/glightbox/css/glightbox.min.css")}} rel="stylesheet">
+  <link href={{url ("assets/vendor/swiper/swiper-bundle.min.css")}} rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href={{url ("assets/css/main.css")}} rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href={{url ("index.html")}} class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Bengkel Al auto Speed</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Bengkel Al auto Speed</span></h2>
+            <p class="animate__animated animate__fadeInUp">Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
+
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
       </div>
-    </div> 
-    
-            
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+      </div><!-- End Section Title -->
+
       <div class="main-panel">
         <div class="content-wrapper">
             @yield('content')
         </div>
       </div>
-    
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <div class="row mb-5">
-              <div class="col-9">
-                {{-- <h3 class="my-0 site-logo"><img src="{{url('images')}}/kongkam.jpeg" width="100%" height="150px"> --}}
-                <h3 class="footer-heading mb-4">Tentang Bengkel Kami</h3>
-                <p>Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p>
-              </div>
-            </div>
-          </div>
-          {{-- <div class="col-lg-3 ml-auto">
-           
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h3 class="footer-heading mb-4">Navigation</h3>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="{{url ('dashboard')}}">Dashboard</a></li>
-                  <li><a href="{{url ('home')}}">Home</a></li>
-                  <li><a href="{{url ('about')}}">About</a></li>
-                  <li><a href="{{url ('jenis')}}">Jenis</a></li>
-                  <li><a href="{{url ('service')}}" >Service</a></li>
-                  <li><a href="{{url ('contact')}}" >Contact</a></li>
-                </ul>
-              </div>
-              
-            </div>
-            
-          </div> --}}
-          
 
-          {{-- <div class="col-lg-4 mb-5 mb-lg-0" id="contact-section">
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
-            <div class="mb-5">
-              <h3 class="footer-heading mb-4">hubungi kami</h3>
-              <form method="post" class="form-subscribe">
-                <div class="form-group mb-3">
-                  <input type="text" class="form-control border-white text-white bg-transparent" placeholder="Name" aria-label="Enter Email" aria-describedby="button-addon2">
-                </div>
-                <div class="form-group mb-3">
-                  <input type="text" class="form-control border-white text-white bg-transparent" placeholder="Enter email" aria-label="Enter Email" aria-describedby="button-addon2">
-                </div>
-                <div class="form-group mb-3">
-                  <textarea name="" class="form-control" id="" cols="30" rows="4" placeholder="Your message"></textarea>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-primary px-5" type="submit">Send Message</button>
-                </div>
-              </form>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Hubungi Kami</p>
+      </div><!-- End Section Title -->
 
-            </div>
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Alamat</h3>
+                <p>Lrg. Muvakat 5, Sukajaya, Kec. Sukarami, Kota Palembang, Sumatera Selatan</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+62 82271361371</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>alAutoSpeed@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
 
           </div>
-          
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="mb-4">
-                  <a href="{{url ('facebook')}}" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="{{url ('twitter')}}" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="{{url ('instagram')}}" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="{{url ('linkedin')}}" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                </div>
-            <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-          </div>
-          
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Selecao</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Selecao</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
         </div>
       </div>
-    </footer>
-  </div> --}}
+    </div>
+  </footer>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/stickyfill.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="{{('js/dashboard.js')}}"></script>
-     
-  </body>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
-<!-- END .site-navbar-wrap -->
-    {{-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-      <a class="dropdown-item">
-        <i class="mdi mdi-settings text-primary"></i>
-        Settings
-      </a>
-      <a class="dropdown-item">
-        <i class="mdi mdi-logout text-primary"></i>
-        Logout
-      </a>
-      <!-- Authentication --> --}}
+

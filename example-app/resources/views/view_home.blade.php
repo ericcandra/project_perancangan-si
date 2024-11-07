@@ -3,12 +3,9 @@
 
 @section('content')
 <div class="alert alert-info text-center">
-    <h1 style="margin-bottom: 0px"><b>Selamat Datang</b> di website bengkel Al Auto Speed</h1>
-    
-    {{-- <img src="img_perpustakaan.jpg" alt="perpustakaan">   --}}
   </div>
     <div class="col-mb-6">
-        <img src="{{url('images')}}/bengkel.jpg" width="100%" height="100px">
+        <img src="{{url('images')}}/bengkel.jpg" width="50%" height="200px">
     </div>
 
     <div class="site-section" id="home-section">
