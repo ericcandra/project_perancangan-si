@@ -73,12 +73,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href={{url ("#home")}} class="active">Home</a></li>
+          <li><a href={{url ("home")}} class="active">Home</a></li>
           <li><a href={{url ("#about")}}>About</a></li>
-          <li><a href={{url ("#produk")}}>Produk</a></li>
-          <li><a href={{url ("#stok")}}>Stok</a></li>
-          <li><a href={{url ("#transaksi")}}>Transaksi</a></li>
-          <li><a href={{url ("#laporan")}}>Laporan</a></li>
+          <li><a href={{url ("produk")}}>Produk</a></li>
+          <li><a href="{{url ('stok')}}" class="active">Stok</a></li>
+          <li><a href={{url ("transaksi")}}>Transaksi</a></li>
+          <li><a href={{url ("laporan")}}>Laporan</a></li>
           <li><a href={{url ("#contact")}}>Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

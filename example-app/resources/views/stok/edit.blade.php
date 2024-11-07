@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title','_stok')
+@section('title','stok')
 
 @section('content')
 <div class="row">
@@ -45,7 +45,7 @@
                 @enderror
               </div> --}}
               <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <a href="{{ url('#stok')}}" class="btn btn-light">Batal</a>
+              <a href="{{ url('stok')}}" class="btn btn-light">Batal</a>
             </form>
           </div>
         </div>

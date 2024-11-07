@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title','_stok')
+@section('title','stok')
 
 @section('content')
     {{-- <h1>UMDP</h1>
@@ -48,7 +48,7 @@
                               </form>
                               @endcan
                               @can('update',$item)
-                              <a href="{{rouste('_stok.edit',$item["nama_barang"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{route('_stok.edit',$item["nama_barang"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                         </tr>

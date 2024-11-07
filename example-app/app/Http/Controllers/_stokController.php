@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\_stok;
-// use App\Models\buku;
-// use App\Models\Petugas;
-// use App\Models\pinjam;
+
+
 use Illuminate\Http\Request;
 
 
