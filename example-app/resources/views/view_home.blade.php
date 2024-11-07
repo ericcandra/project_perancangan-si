@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-md-6 mb-5">
             <h1 class="text-black serif text-uppercase mb-4">VISI</h1>
-              <p class="text-black mb-5">Visi bengkel mobil adalah pandangan jangka panjang yang diinginkan atau harapan yang ingin dicapai oleh bengkel tersebut di masa depan. Hal ini mencakup aspek-aspek penting seperti nilai inti, pencapaian, dan dampak yang diharapkan dari bengkel. Visi ini membantu tim agar fokus pada tujuan bersama untuk mencapai keberhasilan jangka panjang.</p>
+              <p class="text-black mb-5">justify-content-between.Visi bengkel mobil adalah pandangan jangka panjang yang diinginkan atau harapan yang ingin dicapai oleh bengkel tersebut di masa depan. Hal ini mencakup aspek-aspek penting seperti nilai inti, pencapaian, dan dampak yang diharapkan dari bengkel. Visi ini membantu tim agar fokus pada tujuan bersama untuk mencapai keberhasilan jangka panjang.</p>
             <h1 class="text-black serif text-uppercase mb-4">MISI</h1>
             <ul>
               <li>Pemahaman identitas bisnis</li>
@@ -45,20 +45,19 @@
         </div>
       </div>
     </div>
-    <h3>Pengertian bengkel mobil adalah tempat yang menyediakan layanan perbaikan, perawatan, dan pemeliharaan kendaraan bermobil. Fungsi utama bengkel mobil adalah untuk memastikan kendaraan tetap dalam kondisi yang baik dan aman serta mengatasi masalah teknis yang mungkin terjadi. Pada artikel ini, kita akan membahas pengertian, fungsi, tugas, dan persyaratan yang harus dipenuhi untuk membuka bengkel mobil.</h3>
-    <p>
+  
     <h4>Bengkel Kami menyediakan </h4>
     Bengkel mobil adalah tempat yang menyediakan layanan perbaikan dan pemeliharaan mobil. Sebagai tempat yang sangat penting dalam dunia otomotif, bengkel mobil memiliki berbagai tugas yang perlu dilakukan untuk menjaga kinerja dan keandalan kendaraan.
     Berikut adalah tugas umum yang dilakukan di bengkel mobil
     </p>
     <ul>
-      <li>Mendeteksi dan mendiagnosis masalah teknis pada mobil.</li>
-      <li>Mengganti atau memperbaiki komponen yang rusak atau aus pada mobil, seperti rem, suspensi, atau sistem kelistrikan.</li>
-      <li>Mengganti oli dan filter pada mesin mobil serta melakukan servis rutin lainnya untuk menjaga performa mobil.</li>
-      <li>Mengatur dan menyelaraskan sistem kemudi dan suspensi kendaraan.</li>
-      <li>Melakukan perawatan dan perbaikan pada sistem pendingin, termasuk sistem pendingin mesin dan AC mobil.</li>
-      <li>Melaksanakan proses perawatan pada sistem transmisi dan kopling mobil untuk memastikan kinerjanya yang optimal.</li>
-      <li>Memperbaiki kerusakan pada sistem kelistrikan mobil, seperti masalah pada sistem pengisian daya atau pengapian.</li>
+      <ol>Mendeteksi dan mendiagnosis masalah teknis pada mobil.</ol>
+      <ol>Mengganti atau memperbaiki komponen yang rusak atau aus pada mobil, seperti rem, suspensi, atau sistem kelistrikan.</ol>
+      <ol>Mengganti oli dan filter pada mesin mobil serta melakukan servis rutin lainnya untuk menjaga performa mobil.</ol>
+      <ol>Mengatur dan menyelaraskan sistem kemudi dan suspensi kendaraan.</ol>
+      <ol>Melakukan perawatan dan perbaikan pada sistem pendingin, termasuk sistem pendingin mesin dan AC mobil.</ol>
+      <ol>Melaksanakan proses perawatan pada sistem transmisi dan kopling mobil untuk memastikan kinerjanya yang optimal.</ol>
+      <ol>Memperbaiki kerusakan pada sistem kelistrikan mobil, seperti masalah pada sistem pengisian daya atau pengapian.</ol>
     </ul>
 
 @endsection

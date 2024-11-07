@@ -1,35 +1,42 @@
+{{-- <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Selecao Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="public/assets/img/favicon.png" rel="icon">
+  <link href="public/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="public/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="public/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="public/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="public/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="public/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="public/assets/css/main.css" rel="stylesheet">  --}}
+
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title')</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url ('fonts/icomoon/style.css')}}">
-    <link rel="stylesheet" href="{{url ('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url ('css/animate.css')}}">
-    <link rel="stylesheet" href="{{url ('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{url ('css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{url ('css/bootstrap-datepicker.css')}}">
-    
-    
-    <link rel="stylesheet" href="{{url ('fonts/flaticon/font/flaticon.css')}}">
-  
-    <link rel="stylesheet" href="{{url ('css/aos.css')}}">
-    <link rel="stylesheet" href="{{url ('css/jquery.fancybox.min.css')}}">
-    
-
-    <link rel="stylesheet" href="{{url ('css/style.css')}}">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>@yield('title')</title>
+  <title>bengkel al auto Speed</title>
   <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="keywords" content=""> 
 
   <!-- Favicons -->
   <link href={{url ("assets/img/favicon.png")}} rel="icon">
@@ -66,11 +73,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#stok">Stok</a></li>
+          <li><a href="#transaksi">Transaksi</a></li>
+          <li><a href="#laporan">Laporan</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -129,6 +137,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About</h2>
+        <p>Tentang Kami</p>
       </div><!-- End Section Title -->
 
       <div class="main-panel">
@@ -163,7 +172,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>+62 82271361371</p>
+                <p>0813-7771-7310</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -219,18 +228,17 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Selecao</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h3 class="sitename">Bengkel Al auto Speed</h3>
+      <p>Untuk Informasi lebih lanjut bisa hubungi kami melalui media sosial media kami di bawah ini</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Selecao</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">Bengkel Al auto Speed</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
