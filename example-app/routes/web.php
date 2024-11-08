@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\stokController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\_stokController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,6 +13,7 @@ Route::get('home', function () {
     return view('view_home');
 });
 
+// Route:: resource('stok', _stokController::class);
 // Route::middleware('auth')->group(function () {
 
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
