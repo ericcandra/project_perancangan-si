@@ -1,35 +1,33 @@
-@extends('layout.main')
+@extends('layout.transaksi')
 
-@section('title','stok')
+@section('title','transaksi')
 
 @section('content')
 <div class="row">
-    {{-- formulirtambah fakultas --}}
+    formulir tambah transaksi
     <div class="col-md-6 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Tambah Stok</h4>
+            <h4 class="card-title">Tambah transaksi</h4>
             <p class="card-description">
-              Formulir tambah Stok
+              Formulir Transaksi
             </p>
-            <form method="POST" action="{{ route('stok.store')}}" class ="forms-sample">
+            <form method="POST" action="{{ route('transaksi.update',$stok['id'])}}" class ="forms-sample">
+            @method('put')
             @csrf
               <div class="form-group">
-                <label for="nama">Nama Barang</label>
-                <input type="text" class="form-control" name="nama_barang" placeholder="">
+                <label for="nama">tanggal transaksi</label>
+                <input type="date" class="form-control" name="tanggal_transaksi" placeholder="">
               </div>
-              {{-- @error('nama_anggota')
-                  {{ $message}}
-              @enderror --}}
 
               <div class="form-group">
-                <label for="nama">Kualitas</label>
-                <input type="text" class="form-control" name="kualitas" placeholder="">
+                <label for="nama">jumlah total</label>
+                <input type="text" class="form-control" name="jumlah_total" placeholder="">
               </div>
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label for="nama">Batas Stok</label>
                 <input type="text" class="form-control" name="batas_stok" placeholder="">
-              </div>
+              </div> --}}
               
               {{-- <div class="form-group">
                 <label for="text">kode_buku</label>
@@ -44,13 +42,13 @@
                     <span class="text-danger">
                         {{$message}}
                     </span>
-                @enderror --}}
-              </div>
+                @enderror
+              </div> --}}
               <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <a href="{{ url('stok')}}" class="btn btn-light">Batal</a>
+              <a href="{{ url('transaksi')}}" class="btn btn-light">Batal</a>
             </form>
           </div>
         </div>
       </div>
-</div>
+</div> 
 @endsection

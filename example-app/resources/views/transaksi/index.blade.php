@@ -1,6 +1,6 @@
-@extends('layout.main')
+@extends('layout.transaksi')
 
-@section('title','stok')
+@section('title','transaksi')
 
 @section('content')
     {{-- <h1>UMDP</h1>
@@ -13,30 +13,30 @@
     <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Stok</h4>
+                  <h4 class="card-title">Transaksi</h4>
                   <p class="card-description">
-                    Add class <code>list data Stok</code>
+                    Add class <code>list data transaksi</code>
                   </p>
-                  @can('create',App\stok::class)
-                  <a href="{{route('stok.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
+                  @can('create',App\transaksi::class)
+                  <a href="{{route('transaksi.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
                   @endcan
                   <div class="table-responsive">
                     <table class="table">
                       <thead>
                         <tr>
-                          <th>Nama Barang</th>
-                          <th>Jenis</th>
-                          <th>Batas Stok</th>
+                          <th>tanggal transaksi</th>
+                          <th>jumlah total</th>
+                          {{-- <th>Batas Stok</th> --}}
                           <th>Aksi</th>
                           {{-- <th>kode buku</th> --}}
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($stok as $item)
+                        @foreach ($transaksi as $item)
                         <tr>
-                            <td>{{$item["nama_barang"]}}</td>
-                            <td>{{$item["kualitas"]}}</td>
-                            <td>{{$item["batas_stok"]}}</td>
+                            <td>{{$item["tanggal_transaksi"]}}</td>
+                            <td>{{$item["jumlah_total"]}}</td>
+                            {{-- <td>{{$item["batas_stok"]}}</td> --}}
                             {{-- <td>{{$item["buku"]["kode_buku"]}}</td> --}}
                             <td>
                               {{-- @can('delete',$item)
@@ -48,7 +48,7 @@
                               </form>
                               @endcan --}}
                               @can('update',$item)
-                              <a href="{{rouste('stok.edit',$item["nama_barang"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
+                              <a href="{{rouste('transaksi.edit',$item["id"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
                               @endcan  
                             </td>
                         </tr>

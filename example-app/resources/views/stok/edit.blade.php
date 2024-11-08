@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('layout.stok')
 
 @section('title','stok')
 

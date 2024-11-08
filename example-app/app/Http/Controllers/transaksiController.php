@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\produk;
+use App\Models\transaksi;
 // use App\Models\buku;
 // use App\Models\Petugas;
 // use App\Models\pinjam;
 use Illuminate\Http\Request;
 
 
-class produkController extends Controller
+class transaksiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +21,9 @@ class produkController extends Controller
         // }else{
         //     $mahasiswa = Anggota::all();
         // }
-        $produk = produk::all();
-        return view('produk.index')
-            ->with('produk',$produk);
+        $transaksi = transaksi::all();
+        return view('transaksi.index')
+            ->with('transaksi',$transaksi);
         //
     }
 
@@ -33,7 +33,7 @@ class produkController extends Controller
     public function create()
     {
         // $anggota = anggota::all();
-        return view('produk.create');
+        return view('transaksi.create');
         // ->with('buku',$anggota);
     }
 
@@ -42,15 +42,15 @@ class produkController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->user()->cannot('create', produk::class)){
+        if ($request->user()->cannot('create', transaksi::class)){
             abort(403);
         }
         // return($request);
         // validasi form
         $val = $request->validate([
-            'nama_barang'=>"required|unique:produks",
-            'jenis'=>"required",
-            //'batas_stok'=>"required",
+            'id'=>"required|unique:transaksis",
+            'tanggal_transaksi'=>"required",
+            'jumlah_total'=>"required",
             // 'buku_id'=>'required'
         ]);
 
@@ -64,45 +64,45 @@ class produkController extends Controller
         // $request->url_foto->move('foto',$val['url_foto']);
 
         // simpan ke tabel fakultas
-        produk::create($val);
+        transaksi::create($val);
 
         // redirect ke halaman list fakultas
-        return redirect()->route('produk.index')->with('success',$val['nama_barang'].'berhasil disimpan');
+        return redirect()->route('transaksi.index')->with('success',$val['id'].'berhasil disimpan');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(produk $produk)
+    public function show(transaksi $transaksi)
     {
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(produk $produk)
+    public function edit(transaksi $transaksi)
     {
-        $produk = produk::all(); 
-        return view('produk.edit')
-        ->with('produk',$produk);
+        $transaksi = transaksi::all(); 
+        return view('transaksi.edit')
+        ->with('transaksi',$transaksi);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, produk $produk)
+    public function update(Request $request, transaksi $transaksi)
     {
         // if (auth()->user()->cannot('update', $anggota)){
         //     abort(403);
         // }
         // // dd($request);
-        if($request->nama_barang) {
+        if($request->id) {
             $val = $request->validate([
                 // 'id'=> 'required',
                 // 'npm'=>'required',
-                'nama_barang'=>"required|unique:produkss",
-                'kualitas'=>'required',
-                //'batas_stok'=>'required',
+                'id'=>"required|unique:transaksis",
+                'tanggal_transaksi'=>'required',
+                'jumlah_total'=>'required',
             
                 // 'url_foto' => 'Required|file|mimes:png,jpg|max:10000',
                 // 'prodi_id' => 'required'
@@ -112,9 +112,9 @@ class produkController extends Controller
             $val = $request->validate([
                 // 'id'=> 'required',
                 // 'npm'=>'required',
-                'nama_barang'=>"required|unique:produks",
-                // 'nama_buku'=>'required',
-                'kualitas'=>'required',
+                'id'=>"required|unique:transaksis",
+                'tanggal_transaksi'=>'required',
+                'jumlah_total'=>'required',
                // 'batas_stok'=>'required',
             ]);
             // ekstenso file yang di upload
@@ -129,10 +129,10 @@ class produkController extends Controller
         }
 
         // simpan ke tabel mahasiswa
-        produk::where('id',$produk['id'])->update($val);
+        transaksi::where('id',$transaksi['id'])->update($val);
 
         // redirect ke halaman list fakultas
-        return redirect()->route('produk.index')->with('success',$val['nama_barang'].'berhasil disimpan');
+        return redirect()->route('transaksi.index')->with('success',$val['id'].'berhasil disimpan');
     }
 
     /**
