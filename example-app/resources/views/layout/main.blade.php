@@ -65,6 +65,11 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
+        <div class="col-3 col-lg-3">
+          <h1 class="my-0 site-logo"><img src="{{url('images')}}/bn.jpg" width="50%" height="80px">
+            {{-- <a href="{{url ('index.html')}}"></a></h1> --}}
+        </div>
+      
       <a href={{url ("index.html")}} class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
@@ -74,13 +79,49 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{{url ('home')}}" class="active">Home</a></li>
-          <li><a href="{{url ('#about')}}">About</a></li>
-          <li><a href="{{url ('produk')}}">Produk</a></li>
-          <li><a href="{{url ('stok')}}">Stok</a></li>
-          <li><a href="{{url ('transaksi')}}">Transaksi</a></li>
-          <li><a href="{{url ('laporan')}}">Laporan</a></li>
-          <li><a href="{{url ('#contact')}}">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('home')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+          {{-- <li><a href="{{url ('home')}}" class="active">Home</a></li> --}}
+          {{-- <li class="nav-item">
+            <a class="nav-link" href="{{url('about')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">About</span>
+            </a>
+          </li> --}}
+          {{-- <li><a href="{{url ('about')}}">About</a></li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('produk')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Produk</span>
+            </a>
+          </li>
+          {{-- <li><a href="{{url ('produk')}}">Produk</a></li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('stok')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Stok</span>
+            </a>
+          </li>
+          {{-- <li><a href="{{url ('stok')}}">Stok</a></li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('transaksi')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Transaksi</span>
+            </a>
+          </li>
+          {{-- <li><a href="{{url ('transaksi')}}">Transaksi</a></li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('laporan')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Laporan</span>
+            </a>
+          </li>
+          {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}
+          {{-- <li><a href="{{url ('#contact')}}">Contact</a></li> --}}
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -100,7 +141,7 @@
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Bengkel Al auto Speed</span></h2>
             <p class="animate__animated animate__fadeInUp">Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p>
-            <a href={{url ("#about")}} class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            <a href={{url ("home")}} class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
 
