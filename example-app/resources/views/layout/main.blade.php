@@ -127,9 +127,9 @@
         </li>
           {{-- <li><a href="{{url ('transaksi')}}">Transaksi</a></li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="{{url('laporan')}}">
+            <a class="nav-link" href="{{url('riwayat')}}">
               <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Laporan</span>
+              <span class="menu-title">Riwayat</span>
             </a>
           </li>
           {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}

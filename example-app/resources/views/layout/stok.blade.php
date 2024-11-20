@@ -98,9 +98,9 @@
         </li>
           {{-- <li><a href="{{url ('transaksi')}}">Transaksi</a></li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="{{url('laporan')}}">
+            <a class="nav-link" href="{{url('riwayat')}}">
               <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Laporan</span>
+              <span class="menu-title">Riwayat</span>
             </a>
           </li>
           {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}
@@ -122,7 +122,7 @@
         <div class="carousel-item active">
           <div class="carousel-container">
             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Bengkel Al auto Speed</span></h2>
-            <p class="animate__animated animate__fadeInUp">Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p>
+            <p class="animate__animated animate__fadeInUp">Bengkel mobil kami adalah tempat di mana kendaraan diperbaiki atau mendapatkan perawatan. Bengkel ini biasanya menawarkan berbagai layanan untuk kendaraan, seperti perbaikan mesin, ganti oli, perbaikan rem, pemeriksaan AC, hingga perbaikan body kendaraan.</p> 
             <a href={{url ("home")}} class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div>
@@ -153,7 +153,7 @@
         </g>
       </svg>
 
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -164,10 +164,6 @@
         </div>
       </div>
 
-
-          
-
-        
 
   </main>
 
