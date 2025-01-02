@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\stokController;
+use App\Http\Controllers\StokController;
 use App\Http\Controllers\transaksiController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +18,7 @@ Route::get('produk', function() {
     return view('view_produk');
 });
 
-Route:: resource('stok', stokController::class);
+Route:: resource('stok', StokController::class);
 Route:: resource('transaksi', transaksiController::class);
 // Route::middleware('auth')->group(function () {
 

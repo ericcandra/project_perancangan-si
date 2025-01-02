@@ -5,13 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class stok extends Model
+class Stok extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama_barang','kualitas','batas_stok'];
-    // public function buku(){
-    //     return $this->belongsTo(buku::class);
 
-    // }
-    
-};
+    protected $fillable = ['nama_barang', 'kualitas', 'batas_stok'];
+}
