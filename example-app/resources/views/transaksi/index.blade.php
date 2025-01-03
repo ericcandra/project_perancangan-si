@@ -1,106 +1,107 @@
 @extends('layout.transaksi')
 
-@section('title','transaksi')
+@section('title', 'Daftar Transaksi')
 
 @section('content')
-    {{-- <h1>UMDP</h1>
-    <h2>prodi</h2>
-    <ul>
-    @foreach ($prodi as $item)
-        <li>{{$item ["nama"]}}{{$item["singkatan"]}}</li>
-    @endforeach --}}
-    </ul>
-    <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Transaksi</h4>
-                  <p class="card-description">
-                    Add class <code>list data transaksi</code>
-                  </p>
-                  @can('create',App\transaksi::class)
-                  <a href="{{route('transaksi.create')}}" class="btn btn-rounded btn-primary">Tambah</a>
-                  @endcan
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>tanggal transaksi</th>
-                          <th>jumlah total</th>
-                          {{-- <th>Batas Stok</th> --}}
-                          <th>Aksi</th>
-                          {{-- <th>kode buku</th> --}}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        @foreach ($transaksi as $item)
-                        <tr>
-                            <td>{{$item["tanggal_transaksi"]}}</td>
-                            <td>{{$item["jumlah_total"]}}</td>
-                            {{-- <td>{{$item["batas_stok"]}}</td> --}}
-                            {{-- <td>{{$item["buku"]["kode_buku"]}}</td> --}}
-                            <td>
-                              {{-- @can('delete',$item)
-                              <form action="{{route('anggota.destroy',$item['id'])}}" method="post" style="display: inline">
-                                @method('DELETE')
-                                @csrf
-                                <button type="submit" class="btn btn-sm btn-rounded btn-danger show_confirm" data-name="{{$item["nama_anggota"]}}">Hapus</button>
-                            
-                              </form>
-                              @endcan --}}
-                              @can('update',$item)
-                              <a href="{{rouste('transaksi.edit',$item["id"])}}" class="btn btn-sm btn-rounded btn-warning">ubah</a>
-                              @endcan  
-                            </td>
-                        </tr>
-                         @endforeach
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+<div class="container">
+    <h1>Daftar Transaksi</h1>
+    
+    <!-- Flash Messages -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <!-- Form Tambah Transaksi -->
+    <form action="{{ route('transaksi.store') }}" method="POST" class="mb-4">
+        @csrf
+        <div class="row">
+            <div class="col-md-3">
+                <select class="form-control @error('stok_id') is-invalid @enderror" name="stok_id" required>
+                    <option value="">Pilih Barang</option>
+                    @foreach ($stoks as $stok)
+                        <option value="{{ $stok->id }}" {{ old('stok_id') == $stok->id ? 'selected' : '' }}>
+                            {{ $stok->nama_barang }}
+                        </option>
+                    @endforeach
+                </select>
+                @error('stok_id')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
-            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            @if(session('success'))
-            
-            <script>
-                Swal.fire({
-                  title: "Good job!",
-                  text: "{{session('success') }}",
-                  icon: "success"
-                });
-            </script>
-          @endif
-          <script type="text/javascript">
-           
-            $('.show_confirm').click(function(event) {
-                 var form =  $(this).closest("form");
-                 var name = $(this).data("name");
-                 event.preventDefault();
-                 Swal.fire({
-                  title: "yakin mau dihapus?",
-                  text: "setelah dihapus data tidak bisa dikembalikan",
-                  icon: "warning",
-                  showCancelButton: true,
-                  confirmButtonColor: "#3085d6",
-                  cancelButtonColor: "#d33",
-                  confirmButtonText: "ya, hapus!"
-                })
-                .then((result) => {
-                if (result.isConfirmed) {
-                Swal.fire({
-                  title: "Deleted!",
-                  text: "Your file has been deleted.",
-                  icon: ""
-                });
-                }
-                });
-                 .then((willDelete) => {
-                   if (willDelete.isConfirmed) {
-                     form.submit();
-                   }
-                 });
-             });
-         
-       </script>
+            <div class="col-md-2">
+                <input type="date" class="form-control @error('tanggal_transaksi') is-invalid @enderror" name="tanggal_transaksi" value="{{ old('tanggal_transaksi') }}" required>
+                @error('tanggal_transaksi')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control @error('jumlah_total') is-invalid @enderror" name="jumlah_total" placeholder="Jumlah Total" value="{{ old('jumlah_total') }}" required>
+                @error('jumlah_total')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-md-2">
+                <input type="number" step="0.01" class="form-control @error('harga') is-invalid @enderror" name="harga" placeholder="Harga" value="{{ old('harga') }}" required>
+                @error('harga')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Tabel Daftar Transaksi -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nama Barang</th>
+                <th>Tanggal Transaksi</th>
+                <th>Jumlah Total</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($transaksis as $transaksi)
+                <tr>
+                    <!-- Form Edit Inline -->
+                    <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST" class="d-flex">
+                        @csrf
+                        @method('PUT')
+                        <td>
+                            <select class="form-control" name="stok_id" required>
+                                @foreach ($stoks as $stok)
+                                    <option value="{{ $stok->id }}" {{ $stok->id == $transaksi->stok_id ? 'selected' : '' }}>
+                                        {{ $stok->nama_barang }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </td>
+                        <td>
+                            <input type="date" class="form-control" name="tanggal_transaksi" value="{{ $transaksi->tanggal_transaksi }}" required>
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" name="jumlah_total" value="{{ $transaksi->jumlah_total }}" required>
+                        </td>
+                        <td>
+                            <input type="number" step="0.01" class="form-control" name="harga" value="{{ $transaksi->harga }}" required>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-warning btn-sm">Simpan</button>
+                    </form>
+                            <form action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus transaksi ini?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                            </form>
+                        </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
 @endsection

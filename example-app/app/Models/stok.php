@@ -9,5 +9,14 @@ class Stok extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama_barang', 'kualitas', 'batas_stok'];
+    protected $fillable = [
+        'nama_barang',
+        'kualitas',
+        'batas_stok',
+    ];
+
+    public function transaksis()
+    {
+        return $this->hasMany(Transaksi::class, 'stok_id');
+    }
 }

@@ -6,22 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('stok_id')
+                  ->constrained('stoks') // Referensi ke tabel `stoks`
+                  ->onDelete('cascade') // Hapus data terkait jika stok dihapus
+                  ->onUpdate('cascade'); // Update data terkait jika stok diperbarui
             $table->date('tanggal_transaksi');
-            $table->char('jumlah_total',10);
+            $table->integer('jumlah_total'); 
+            $table->decimal('harga', 15, 2);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('transaksis');

@@ -1,54 +1,34 @@
 @extends('layout.transaksi')
 
-@section('title','transaksi')
+@section('title', 'Ubah Transaksi')
 
 @section('content')
-<div class="row">
-    formulir tambah transaksi
-    <div class="col-md-6 grid-margin stretch-card">
-        <div class="card">
-          <div class="card-body">
-            <h4 class="card-title">Tambah transaksi</h4>
-            <p class="card-description">
-              Formulir Transaksi
-            </p>
-            <form method="POST" action="{{ route('transaksi.update',$stok['id'])}}" class ="forms-sample">
-            @method('put')
-            @csrf
-              <div class="form-group">
-                <label for="nama">tanggal transaksi</label>
-                <input type="date" class="form-control" name="tanggal_transaksi" placeholder="">
-              </div>
-
-              <div class="form-group">
-                <label for="nama">jumlah total</label>
-                <input type="text" class="form-control" name="jumlah_total" placeholder="">
-              </div>
-              {{-- <div class="form-group">
-                <label for="nama">Batas Stok</label>
-                <input type="text" class="form-control" name="batas_stok" placeholder="">
-              </div> --}}
-              
-              {{-- <div class="form-group">
-                <label for="text">kode_buku</label>
-                <select name="buku_id" class="form-control">
-                    @foreach ($buku as $item)
-                        <option value={{$item['id']}}>
-                            {{$item['kode_buku']}}
-                        </option>
-                    @endforeach
-                </select>
-                @error('buku_id')
-                    <span class="text-danger">
-                        {{$message}}
-                    </span>
-                @enderror
-              </div> --}}
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <a href="{{ url('transaksi')}}" class="btn btn-light">Batal</a>
-            </form>
-          </div>
+<div class="container">
+    <h1>Ubah Transaksi</h1>
+    <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST">
+        @csrf
+        @method('PUT')
+        <div class="form-group mb-3">
+            <label for="stok_id">Nama Barang</label>
+            <select name="stok_id" id="stok_id" class="form-control">
+                @foreach ($stoks as $stok)
+                    <option value="{{ $stok->id }}" {{ $transaksi->stok_id == $stok->id ? 'selected' : '' }}>{{ $stok->nama_barang }}</option>
+                @endforeach
+            </select>
         </div>
-      </div>
-</div> 
+        <div class="form-group mb-3">
+            <label for="tanggal_transaksi">Tanggal Transaksi</label>
+            <input type="date" name="tanggal_transaksi" id="tanggal_transaksi" value="{{ $transaksi->tanggal_transaksi }}" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="jumlah_total">Jumlah Total</label>
+            <input type="number" name="jumlah_total" id="jumlah_total" value="{{ $transaksi->jumlah_total }}" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="harga">Harga</label>
+            <input type="number" name="harga" id="harga" value="{{ $transaksi->harga }}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </form>
+</div>
 @endsection
