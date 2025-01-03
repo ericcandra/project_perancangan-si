@@ -103,6 +103,12 @@
               <span class="menu-title">Riwayat</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('contact')}}">
+              <i class="mdi mdi-view-quilt menu-icon"></i>
+              <span class="menu-title">Contact</span>
+            </a>
+          </li>
           {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}
           {{-- <li><a href="{{url ('#contact')}}">Contact</a></li> --}}
         </ul>
@@ -190,7 +196,7 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+          Designed by <a href="https://bootstrapmade.com/">Team ENAPY</a> Distributed By <a href="https://themewagon.com">Multi Data Palembang</a>
         </div>
       </div>
     </div>
