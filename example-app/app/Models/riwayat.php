@@ -9,5 +9,22 @@ class Riwayat extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['aktivitas', 'tanggal', 'deskripsi'];
+    protected $fillable = [
+        'aktivitas',
+        'tanggal',
+        'deskripsi',
+        'transaksi_id',
+        'stock_id',
+    ];
+
+    public function transaksis()
+    {
+        return $this->belongsTo(Transaksi::class);
+    }
+
+    public function stok()
+    {
+        return $this->belongsTo(Stok::class);
+    }
 }
+

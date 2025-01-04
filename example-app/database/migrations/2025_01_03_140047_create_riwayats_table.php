@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('riwayats', function (Blueprint $table) {
             $table->id();
@@ -18,11 +18,10 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->foreignId('transaksi_id')->nullable()->constrained('transaksis')->onDelete('cascade');
             $table->foreignId('stok_id')->nullable()->constrained('stoks')->onDelete('cascade');
+            $table->string('status')->default('nonaktif'); // Tambahkan kolom status
             $table->timestamps();
         });
-        
     }
-    
 
     /**
      * Reverse the migrations.

@@ -94,9 +94,9 @@
           <a class="nav-link" href="{{url('notifikasi')}}">
             <i class="mdi mdi-view-quilt menu-icon"></i>
             <span class="menu-title">Notifikasi
-                @if($unreadCount > 0)
+                {{-- @if($unreadCount > 0)
                 <span class="badge bg-danger">{{ $unreadCount }}</span>
-              @endif
+              @endif --}}
             </span>
           </a>
         </li>
