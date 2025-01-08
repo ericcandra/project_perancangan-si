@@ -11,7 +11,7 @@
 @endif
 
 <!-- Tombol Tambah -->
-<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#tambahNotifikasiModal">Tambah Notifikasi</button>
+{{-- <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#tambahNotifikasiModal">Tambah Notifikasi</button> --}}
 
 <!-- Tabel Notifikasi -->
 <table class="table table-bordered">
