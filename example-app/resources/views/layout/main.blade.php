@@ -140,6 +140,15 @@
               <span class="menu-title">Contact</span>
             </a>
           </li>
+          <li>
+            <a class="btn btn-primary btn-sm px-4 text-white" href="{{ url('login') }}">
+              Logout
+            </a>
+          </li>
+  
+          <!-- Tampilkan tombol Logout jika pengguna sudah login -->
+          
+        
           {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}
           {{-- <li><a href="{{url ('#contact')}}">Contact</a></li> --}}
         </ul>

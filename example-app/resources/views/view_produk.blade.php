@@ -1,63 +1,105 @@
 @extends('layout.mains')
-@section('title', 'produk')
+@section('title', 'Produk')
 
 @section('content')
 <div class="alert alert-info text-center">
-  </div>
-    <div class="col-mb-6">
-        <img src="{{url('images')}}/oli.jpg" width="50%" height="200px">
+    <p>Selamat datang di halaman produk kami!</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <img src="{{ url('images/oli.jpg') }}" alt="Gambar Oli" class="img-fluid">
     </div>
 
-    <div class="site-section" id="home-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-5">
-            <h1 class="text-black serif text-uppercase mb-4">Oli</h1>
-              <p class="text-black mb-5">Visi bengkel mobil adalah pandangan jangka panjang yang diinginkan atau harapan yang ingin dicapai oleh bengkel tersebut di masa depan. Hal ini mencakup aspek-aspek penting seperti nilai inti, pencapaian, dan dampak yang diharapkan dari bengkel. Visi ini membantu tim agar fokus pada tujuan bersama untuk mencapai keberhasilan jangka panjang.</p>
-            <h1 class="text-black serif text-uppercase mb-4">MISI</h1>
-            <ul>
-              <li>Pemahaman identitas bisnis</li>
-              <li>Menganalisis lingkungan bisnis</li>
-              <li>Definisi misi secara nyata</li>
-              <li>Periode pembaruan berkala</li>
-              <li>Komunikasi dan dukung</li>
-            </ul>
-          
-          <div class="col-md-4">
-            {{-- <div class="testimonial bg-white h-100"> --}}
-              <blockquote class="mb-3">
-                
-              <div class="d-flex align-items-center vcard">
-                <div class="vcard-text">
-                  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            {{-- <div class="testimonial bg-white h-100"> --}}
-              <blockquote class="mb-3">
-                <div class="d-flex align-items-center vcard">
-                <div class="vcard-text">
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-6 mb-4">
+        <img src="{{ url('images/kursi.jpg') }}" alt="Gambar Kursi" class="img-fluid">
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <img src="{{ url('images/kaca.jpg') }}" alt="Gambar Kaca Mobil" class="img-fluid">
     </div>
   
-    <h4>Bengkel Kami menyediakan </h4>
-    Bengkel mobil adalah tempat yang menyediakan layanan perbaikan dan pemeliharaan mobil. Sebagai tempat yang sangat penting dalam dunia otomotif, bengkel mobil memiliki berbagai tugas yang perlu dilakukan untuk menjaga kinerja dan keandalan kendaraan.
-    Berikut adalah tugas umum yang dilakukan di bengkel mobil
-    </p>
-    <ul>
-      <ol>Mendeteksi dan mendiagnosis masalah teknis pada mobil.</ol>
-      <ol>Mengganti atau memperbaiki komponen yang rusak atau aus pada mobil, seperti rem, suspensi, atau sistem kelistrikan.</ol>
-      <ol>Mengganti oli dan filter pada mesin mobil serta melakukan servis rutin lainnya untuk menjaga performa mobil.</ol>
-      <ol>Mengatur dan menyelaraskan sistem kemudi dan suspensi kendaraan.</ol>
-      <ol>Melakukan perawatan dan perbaikan pada sistem pendingin, termasuk sistem pendingin mesin dan AC mobil.</ol>
-      <ol>Melaksanakan proses perawatan pada sistem transmisi dan kopling mobil untuk memastikan kinerjanya yang optimal.</ol>
-      <ol>Memperbaiki kerusakan pada sistem kelistrikan mobil, seperti masalah pada sistem pengisian daya atau pengapian.</ol>
-    </ul>
+    <div class="col-md-6 mb-4">
+      <img src="{{ url('images/velg.jpg') }}" alt="Gambar Velg Mobil" class="img-fluid">
+  </div>
+</div>
 
+<div class="site-section" id="home-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <h1 class="text-black serif text-uppercase mb-4">Oli Mobil</h1>
+                <p class="text-black mb-5">
+                    Oli berkualitas adalah kunci untuk menjaga performa mesin kendaraan Anda. Kami menyediakan oli terbaik untuk berbagai jenis kendaraan, memastikan mesin tetap optimal, tahan lama, dan efisien. Pilih oli kami untuk perawatan kendaraan yang maksimal.
+                </p>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <h1 class="text-black serif text-uppercase mb-4">Kursi Mobil</h1>
+                <p class="text-black mb-5">
+                    Kursi yang nyaman dan ergonomis adalah elemen penting untuk menciptakan ruang yang produktif. Kami menawarkan kursi dengan desain modern, bahan berkualitas, dan kenyamanan maksimal untuk kebutuhan rumah atau kantor Anda.
+                </p>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <h1 class="text-black serif text-uppercase mb-4">Kaca Mobil</h1>
+                <p class="text-black mb-5">
+                    Kaca mobil berkualitas tinggi untuk memastikan keamanan dan kenyamanan berkendara. Kami menyediakan kaca dengan material tahan lama dan desain presisi untuk berbagai jenis kendaraan.
+                </p>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <h1 class="text-black serif text-uppercase mb-4">Velg Mobil</h1>
+                <p class="text-black mb-5">
+                    Velg mobil dengan desain stylish dan material berkualitas. Tersedia berbagai pilihan untuk meningkatkan tampilan dan performa kendaraan Anda.
+                </p>
+            </div>
+        </div>
+
+        <h4 class="text-black mb-3">Produk Unggulan Kami</h4>
+        <p class="text-black">
+            Kami menyediakan berbagai produk berkualitas tinggi untuk memenuhi kebutuhan Anda:
+        </p>
+        <ul class="text-black">
+            <li>Oli mesin berkualitas untuk kendaraan Anda.</li>
+            <li>Kursi ergonomis dengan desain modern.</li>
+            <li>Kaca mobil berkualitas tinggi untuk kenyamanan berkendara.</li>
+            <li>Velg mobil dengan desain stylish dan performa tinggi.</li>
+            <li>Produk lainnya yang mendukung gaya hidup dan kebutuhan harian Anda.</li>
+        </ul>
+
+        <h4 class="text-black mb-3">Daftar Harga Produk</h4>
+        <table class="table table-bordered text-black">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oli Mobil</td>
+                    <td>Oli berkualitas tinggi untuk berbagai jenis kendaraan.</td>
+                    <td>Rp 100.000</td>
+                </tr>
+                <tr>
+                    <td>Kursi Mobil</td>
+                    <td>Kursi ergonomis dengan desain modern dan bahan berkualitas.</td>
+                    <td>Rp 500.000</td>
+                </tr>
+                <tr>
+                    <td>Kaca Mobil</td>
+                    <td>Kaca mobil berkualitas tinggi untuk keamanan dan kenyamanan.</td>
+                    <td>Rp 300.000</td>
+                </tr>
+                <tr>
+                    <td>Velg Mobil</td>
+                    <td>Velg mobil dengan desain stylish dan material berkualitas.</td>
+                    <td>Rp 800.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 @endsection

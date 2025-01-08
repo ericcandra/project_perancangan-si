@@ -36,7 +36,7 @@
                 <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editNotifikasiModal-{{ $notifikasi->id }}">Ubah</button>
 
                 <!-- Form Hapus -->
-                <form action="{{ route('notifikasi.destroy', $notifikasi->id) }}" method="POST" style="display:inline-block;">
+                <form action="{{ route('notifikasi.destroy', $notifikasi->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus transaksi ini?');">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
