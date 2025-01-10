@@ -83,78 +83,20 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('home')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Home</span>
-            </a>
-          </li>
-          {{-- <li><a href="{{url ('home')}}" class="active">Home</a></li> --}}
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{url('about')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">About</span>
-            </a>
-          </li> --}}
-          {{-- <li><a href="{{url ('about')}}">About</a></li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('produk')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Produk</span>
-            </a>
-          </li>
-          {{-- <li><a href="{{url ('produk')}}">Produk</a></li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('stok')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Stok</span>
-            </a>
-          </li>
-          {{-- <li><a href="{{url ('stok')}}">Stok</a></li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('transaksi')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Transaksi</span>
-            </a>
-          </li>
-        </li>
-        {{-- <li><a href="{{url ('stok')}}">Stok</a></li> --}}
-        <li class="nav-item">
-          <a class="nav-link" href="{{url('notifikasi')}}">
-            <i class="mdi mdi-view-quilt menu-icon"></i>
-            <span class="menu-title">Notifikasi
-      
-            </span>
-          </a>
-        </li>
-          {{-- <li><a href="{{url ('transaksi')}}">Transaksi</a></li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('riwayat')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Riwayat</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{url('contact')}}">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
-              <span class="menu-title">Contact</span>
-            </a>
-          </li>
+          <li><a class="nav-link active" href="{{url('home')}}">Home</a></li>
+          <li><a class="nav-link" href="{{url('produk')}}">Produk</a></li>
+          <li><a class="nav-link" href="{{url('stok')}}">Stok</a></li>
+          <li><a class="nav-link" href="{{url('transaksi')}}">Transaksi</a></li>
+          <li><a class="nav-link" href="{{url('notifikasi')}}">Notifikasi</a></li>
+          <li><a class="nav-link" href="{{url('riwayat')}}">Riwayat</a></li>
+          <li><a class="nav-link" href="{{url('contact')}}">Contact</a></li>
           <li>
-            <a class="btn btn-primary btn-sm px-4 text-white" href="{{ url('login') }}">
-              Logout
-            </a>
+            <a class="btn btn-primary btn-sm px-4 text-white" href="{{url('login')}}">Logout</a>
           </li>
-  
-          <!-- Tampilkan tombol Logout jika pengguna sudah login -->
-          
-        
-          {{-- <li><a href="{{url ('laporan')}}">Laporan</a></li> --}}
-          {{-- <li><a href="{{url ('#contact')}}">Contact</a></li> --}}
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
+      
     </div>
   </header>
 
