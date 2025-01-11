@@ -77,5 +77,20 @@
             <a href="{{ route('register') }}" class="btn btn-secondary w-100">Register</a>
         </form>
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === 'alspeed1@example.com' && password === 'speed123456') {
+                window.location.href = '/admin';
+            } else if (email === 'user@example.com' && password === 'user12345678') {
+                window.location.href = '/user';
+            } else {
+                e.preventDefault();
+                alert('Invalid credentials');
+            }
+        });
+    </script>
 </body>
 </html>

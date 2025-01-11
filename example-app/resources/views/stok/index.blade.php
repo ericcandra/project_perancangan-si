@@ -46,7 +46,7 @@
 
                 {{-- Batas Stok --}}
                 <div class="form-group mb-3">
-                    <label for="batas_stok">Batas Stok</label>
+                    <label for="batas_stok">Stok</label>
                     <input 
                         type="number" 
                         name="batas_stok" 
@@ -70,7 +70,7 @@
             <tr>
                 <th>Nama Barang</th>
                 <th>Kualitas</th>
-                <th>Batas Stok</th>
+                <th>Stok</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -117,7 +117,7 @@
                                                 required>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <label for="batas_stok">Batas Stok</label>
+                                            <label for="batas_stok">Stok</label>
                                             <input 
                                                 type="number" 
                                                 name="batas_stok" 

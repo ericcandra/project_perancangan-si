@@ -1,3 +1,67 @@
+{{-- @extends('layout.transaksi')
+
+@section('title', 'Daftar Transaksi')
+
+@section('content')
+<div class="container">
+    <h1>Daftar Transaksi</h1>
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    <!-- Tabel Daftar Transaksi -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nama Barang</th>
+                <th>Tanggal Transaksi</th>
+                <th>Jumlah Total</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($transaksis as $transaksi)
+                <tr>
+                    <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <td>
+                            <select name="stok_id" class="form-control" required>
+                                @foreach ($stoks as $stok)
+                                    <option value="{{ $stok->id }}" {{ $stok->id == $transaksi->stok_id ? 'selected' : '' }}>
+                                        {{ $stok->nama_barang }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </td>
+                        <td>
+                            <input type="date" name="tanggal_transaksi" class="form-control" value="{{ $transaksi->tanggal_transaksi }}"
+                            @if($transaksi->tanggal_transaksi < now()->subDay()->format('Y-m-d')) disabled @endif required>
+                        </td>
+                        <td>
+                            <input type="number" name="jumlah_total" class="form-control" value="{{ $transaksi->jumlah_total }}" required>
+                        </td>
+                        <td>
+                            <input type="number" name="harga" class="form-control" value="{{ $transaksi->harga }}" required>
+                        </td>
+                        <td>
+                            <button type="submit" class="btn btn-warning btn-sm">Simpan</button>
+                    </form>
+                            <form action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus transaksi ini?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                            </form>
+                        </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endsection --}}
+
+
 @extends('layout.transaksi')
 
 @section('title', 'Daftar Transaksi')
@@ -35,6 +99,7 @@
                 @error('tanggal_transaksi')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
+                
             </div>
             <div class="col-md-2">
                 <input type="number" class="form-control @error('jumlah_total') is-invalid @enderror" name="jumlah_total" placeholder="Jumlah Total" value="{{ old('jumlah_total') }}" required>
@@ -68,12 +133,11 @@
         <tbody>
             @foreach ($transaksis as $transaksi)
                 <tr>
-                    <!-- Form Edit Inline -->
-                    <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST" class="d-flex">
+                    <form action="{{ route('transaksi.update', $transaksi->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <td>
-                            <select class="form-control" name="stok_id" required>
+                            <select name="stok_id" class="form-control" required>
                                 @foreach ($stoks as $stok)
                                     <option value="{{ $stok->id }}" {{ $stok->id == $transaksi->stok_id ? 'selected' : '' }}>
                                         {{ $stok->nama_barang }}
@@ -82,18 +146,19 @@
                             </select>
                         </td>
                         <td>
-                            <input type="date" class="form-control" name="tanggal_transaksi" value="{{ $transaksi->tanggal_transaksi }}" required>
+                            <input type="date" name="tanggal_transaksi" class="form-control" value="{{ $transaksi->tanggal_transaksi }}"
+                            @if($transaksi->tanggal_transaksi < now()->subDay()->format('Y-m-d')) disabled @endif required>
                         </td>
                         <td>
-                            <input type="number" class="form-control" name="jumlah_total" value="{{ $transaksi->jumlah_total }}" required>
+                            <input type="number" name="jumlah_total" class="form-control" value="{{ $transaksi->jumlah_total }}" required>
                         </td>
                         <td>
-                            <input type="number" step="0.01" class="form-control" name="harga" value="{{ $transaksi->harga }}" required>
+                            <input type="number" name="harga" class="form-control" value="{{ $transaksi->harga }}" required>
                         </td>
                         <td>
                             <button type="submit" class="btn btn-warning btn-sm">Simpan</button>
                     </form>
-                            <form action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus transaksi ini?');">
+                            <form action="{{ route('transaksi.destroy', $transaksi->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus transaksi ini?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Hapus</button>

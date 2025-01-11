@@ -7,24 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Riwayat extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        'aktivitas',
-        'tanggal',
-        'deskripsi',
-        'transaksi_id',
-        'stock_id',
+        'aktivitas', 'tanggal', 'deskripsi', 'transaksi_id', 'stok_id'
     ];
 
-    public function transaksis()
+    public function transaksi()
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(Transaksi::class, 'transaksi_id');
     }
 
     public function stok()
     {
-        return $this->belongsTo(Stok::class);
+        return $this->belongsTo(Stok::class, 'stok_id');
     }
 }
+
 
